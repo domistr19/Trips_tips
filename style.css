@@ -1,0 +1,131 @@
+#mainimg{
+        width:100%;
+        height:350px;
+        background-image: url(/image/bezdez.jpg);
+        background-position: 50% 30% ;
+        background-size: cover ;
+        overflow: hidden;
+        background-repeat: no-repeat;   
+        display: flex;     
+}
+
+nav{   font-family: 'Julius Sans One', sans-serif;
+        width:100%;
+        height: auto;
+        display:flex;
+        align-items: flex-end;
+        font-size: larger;
+        font-weight: bold;
+        color:#A9A9A9;
+
+}
+
+ul{     width:100%;
+        display: flex;
+        flex-direction: row-reverse;
+        list-style-type: none;
+        margin:20px 100px 20px ;
+
+}
+li{     flex:1 1 1;
+        width:auto;
+        height:auto;
+        margin: 5px;
+        padding: 3px;
+        border: solid 2px;
+        cursor: pointer;
+
+}
+body{  font-family: 'Julius Sans One', sans-serif;
+        background-image: url(/image/noisy-texture-100x100-o16-d10-c-9c9c9c-t0.png);
+        background-repeat: repeat;
+}
+
+#intro{
+        width:75%;
+        margin:20px auto;
+}
+
+h2{     width:70%;
+        text-align: center;
+        margin:20px auto;
+        padding: 10px;
+        font-size: 35px;
+}
+
+p{
+    width:70%;
+    text-align: center;
+    margin:20px auto;
+    padding: 10px;
+}
+
+#boxcontainer{
+    display: flex;
+    width:80%;
+    margin:15px auto;
+    justify-content:space-evenly;
+}
+
+.odkaz{
+    width:200px; height:200px;
+    text-align:center;
+    margin:10px;
+    padding:15px;
+}
+
+.boxcontainer2{
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    margin:100px auto;
+    justify-content:space-evenly;
+
+}
+
+.show{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: space-between;
+    height:auto;
+    position:relative;
+}
+
+.leftbanner{
+   width:10%; height:100%;
+   margin:0px;
+   text-align: center;
+
+   position:absolute; left:0px;
+}
+
+.rightbanner{ 
+    width:10%; height:100%;
+    margin:0px;
+    text-align: center;
+    
+    position:absolute; right:0px;
+ }
+
+ .rightbanner img{
+        transform: rotate(180deg);
+        
+ }
+
+ .slide{
+    width:80%; height:100%;
+    margin:0px auto;
+ }
+
+ .slide img{width:100%;
+            height:auto;
+
+ }
+
+ .desc{
+        width:100%;
+        height:50px;
+        text-align: center;
+ }
+
