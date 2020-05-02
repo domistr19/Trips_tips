@@ -12,46 +12,83 @@ bezdez = { photo:'image/bezdez.jpg',title: 'Hrad Bezděz', desc:'Very popular an
 
 
 
-let photos = [];
+let photosVisited = [];
 
-photos.push(bouzov,buchlov,houska,helfstyn,kost,loket,pernstejn,rabi,svihov,vranov,bezdez);
+photosVisited.push(bouzov,houska,helfstyn,pernstejn,bezdez);
+
+let photosPlan = [];
+
+photosPlan.push(buchlov,kost,loket,rabi,svihov,vranov);
 
 let currentPhoto = 0;
 let currentTitle = 0;
 let currentDesc = 0;
 
-$('#photo').attr('src', photos[currentPhoto].photo);
-$('#pictitle').text(photos[currentPhoto].title);
-$('#desc').text(photos[currentPhoto].desc);
+$('#photovis').attr('src', photosVisited[currentPhoto].photo);
+$('#pictitlevis').text(photosVisited[currentPhoto].title);
+$('#descvis').text(photosVisited[currentPhoto].desc);
+
+$('#photoplan').attr('src', photosPlan[currentPhoto].photo);
+$('#pictitleplan').text(photosPlan[currentPhoto].title);
+$('#descplan').text(photosPlan[currentPhoto].desc);
 
 
+$('#rightvis').click(()=> {
 
-$('.rightbanner').click(()=> {
-
-    if (currentPhoto >=0 && currentPhoto <10) {
-        $('#photo').attr('src', photos[currentPhoto++].photo);}
-    else {$('#photo').attr('src', photos[currentPhoto].photo);};
-    if (currentTitle >=0 && currentTitle <10) {
-        $('#pictitle').text(photos[currentTitle++].title);}
-    else {$('#pictitle').text(photos[currentTitle].title);};
-    if (currentDesc >=0 && currentDesc <10){
-        $('#desc').text(photos[currentDesc++].desc);}
-    else {$('#desc').text(photos[currentDesc].desc);};
+    if (currentPhoto >=0 && currentPhoto < photosVisited.length) {
+        $('#photovis').attr('src', photosVisited[currentPhoto++].photo);}
+    else {$('#photovis').attr('src', photosVisited[currentPhoto].photo);};
+    if (currentTitle >=0 && currentTitle < photosVisited.length) {
+        $('#pictitlevis').text(photosVisited[currentTitle++].title);}
+    else {$('#pictitlevis').text(photosVisited[currentTitle].title);};
+    if (currentDesc >=0 && currentDesc < photosVisited.length){
+        $('#descvis').text(photosVisited[currentDesc++].desc);}
+    else {$('#descvis').text(photosVisited[currentDesc].desc);};
     }
 );
 
 
-$('.leftbanner').click(()=> {
+$('#leftvis').click(()=> {
+
+    if (currentPhoto >0 && currentPhoto <= photosPlan.length) {
+        $('#photovis').attr('src', photosVisited[currentPhoto--].photo);}
+    else {$('#photovis').attr('src', photosVisited[currentPhoto].photo);};
+    if (currentTitle >0 && currentTitle <= photosPlan.length) {
+        $('#pictitlevis').text(photosVisited[currentTitle--].title);}
+    else {$('#pictitlevis').text(photosVisited[currentTitle].title);};
+    if (currentDesc >0 && currentDesc <= photosPlan.length) {
+        $('#descvis').text(photosVisited[currentDesc--].desc);}
+    else {$('#descvis').text(photosVisited[currentDesc].desc);};
+    }
+);
+
+
+$('#rightplan').click(()=> {
+
+    if (currentPhoto >=0 && currentPhoto <10) {
+        $('#photoplan').attr('src', photosPlan[currentPhoto++].photo);}
+    else {$('#photoplan').attr('src', photosPlan[currentPhoto].photo);};
+    if (currentTitle >=0 && currentTitle <10) {
+        $('#pictitleplan').text(photosPlan[currentTitle++].title);}
+    else {$('#pictitleplan').text(photosPlan[currentTitle].title);};
+    if (currentDesc >=0 && currentDesc <10){
+        $('#descplan').text(photosPlan[currentDesc++].desc);}
+    else {$('#descplan').text(photosPlan[currentDesc].desc);};
+    }
+);
+
+
+$('#leftplan').click(()=> {
 
     if (currentPhoto >0 && currentPhoto <= 10) {
-        $('#photo').attr('src', photos[currentPhoto--].photo);}
-    else {$('#photo').attr('src', photos[currentPhoto].photo);};
+        $('#photoplan').attr('src', photosPlan[currentPhoto--].photo);}
+    else {$('#photoplan').attr('src', photosPlan[currentPhoto].photo);};
     if (currentTitle >0 && currentTitle <= 10) {
-        $('#pictitle').text(photos[currentTitle--].title);}
-    else {$('#pictitle').text(photos[currentTitle].title);};
+        $('#pictitleplan').text(photosPlan[currentTitle--].title);}
+    else {$('#pictitleplan').text(photosPlan[currentTitle].title);};
     if (currentDesc >0 && currentDesc <= 10) {
-        $('#desc').text(photos[currentDesc--].desc);}
-    else {$('#desc').text(photos[currentDesc].desc);};
+        $('#descplan').text(photosPlan[currentDesc--].desc);}
+    else {$('#descplan').text(photosPlan[currentDesc].desc);};
     }
 );
     

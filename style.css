@@ -36,21 +36,38 @@ li{     flex:1 1 1;
         cursor: pointer;
 
 }
+
+a {     font-family: 'Alegreya Sans SC', sans-serif;
+        font-size: larger;
+        font-weight: bold;
+        color:#A9A9A9;
+        text-decoration: none;
+}
+
+a:hover{    cursor: pointer;}
+
 body{  font-family: 'Alegreya Sans SC', sans-serif;
         background-image: url(/image/noisy-texture-100x100-o16-d10-c-9c9c9c-t0.png);
         background-repeat: repeat;
 }
 
-#intro{
+#intro{ font-family: 'Alegreya Sans SC', sans-serif;
+        font-size: 30px;
         width:75%;
         margin:20px auto;
+        background-color: whitesmoke;
+        opacity: 0.5;
 }
 
-h2{     width:70%;
+h2{     font-family: 'Alegreya Sans SC', sans-serif;
+        font-size: 40px;
+        width:70%;
         text-align: center;
-        margin:20px auto;
+        margin:50px auto;
         padding: 10px;
         font-size: 35px;
+        background-color: whitesmoke;
+        opacity: 0.5;
 }
 
 p{
@@ -147,7 +164,7 @@ p{
         
  }
 
- #pictitle, #desc{
+ .pictitle, .description{
         font-size: 50px bold;
  }
 
