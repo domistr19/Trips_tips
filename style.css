@@ -40,7 +40,7 @@ li{     flex:1 1 1;
 a {     font-family: 'Alegreya Sans SC', sans-serif;
         font-size: larger;
         font-weight: bold;
-        color:#A9A9A9;
+        color:	#F8F8FF;
         text-decoration: none;
 }
 
@@ -62,8 +62,9 @@ body{  font-family: 'Alegreya Sans SC', sans-serif;
 h2{     font-family: 'Alegreya Sans SC', sans-serif;
         font-size: 40px;
         width:70%;
+        box-sizing: border-box;
         text-align: center;
-        margin:50px auto;
+        margin:20px auto 10px;
         padding: 10px;
         font-size: 35px;
         background-color: whitesmoke;
@@ -72,24 +73,58 @@ h2{     font-family: 'Alegreya Sans SC', sans-serif;
 
 p{
     width:70%;
+    box-sizing: border-box;
     text-align: center;
-    margin:20px auto;
-    padding: 10px;
+    margin:10px auto;
+    padding: 20px;
 }
 
 #boxcontainer{
     display: flex;
     width:70%;
     margin:15px auto;
-    justify-content:space-evenly;
+    justify-content:space-between;
+   
 }
 
-.odkaz{
+.odkaz{ display:flex;
     width:200px; height:200px;
-    text-align:center;
+    align-items:center;
+    justify-content: space-around;
     margin:10px;
     padding:15px;
+    background-color: #A9A9A9;
+    position: relative;
+    
+    
 }
+
+#about {        margin:10px;
+                padding:15px;
+                background-image: url(image/about.png);
+                background-size:100% 100%;                 
+                background-repeat: no-repeat;}
+                
+
+#visited {      margin:10px;
+                padding:15px;
+                background-image:url(image/castle.png);
+                background-size:100% 100%;                
+                background-repeat: no-repeat;
+            }
+            
+#tick{          position: absolute; bottom:20px;right:20px;
+                background-image:url(image/tick.png);
+                background-size: 100%;
+                width: 50px; height: 50px;
+            }
+
+#list {         margin:10px;
+                padding:15px;
+                Background-image: url(image/castle.png);
+                background-size:100% 100%;                                 
+                background-repeat: no-repeat;
+                }
 
 .boxcontainer2{
     display: flex;

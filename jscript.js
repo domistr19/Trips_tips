@@ -37,13 +37,13 @@ $('#rightvis').click(()=> {
 
     if (currentPhoto >=0 && currentPhoto < photosVisited.length) {
         $('#photovis').attr('src', photosVisited[currentPhoto++].photo);}
-    else {$('#photovis').attr('src', photosVisited[currentPhoto].photo);};
+    else {$('#photovis').attr('src', photosVisited[0].photo);};
     if (currentTitle >=0 && currentTitle < photosVisited.length) {
         $('#pictitlevis').text(photosVisited[currentTitle++].title);}
-    else {$('#pictitlevis').text(photosVisited[currentTitle].title);};
+    else {$('#pictitlevis').text(photosVisited[0].title);};
     if (currentDesc >=0 && currentDesc < photosVisited.length){
         $('#descvis').text(photosVisited[currentDesc++].desc);}
-    else {$('#descvis').text(photosVisited[currentDesc].desc);};
+    else {$('#descvis').text(photosVisited[0].desc);};
     }
 );
 
@@ -52,13 +52,13 @@ $('#leftvis').click(()=> {
 
     if (currentPhoto >0 && currentPhoto <= photosPlan.length) {
         $('#photovis').attr('src', photosVisited[currentPhoto--].photo);}
-    else {$('#photovis').attr('src', photosVisited[currentPhoto].photo);};
+    else {$('#photovis').attr('src', photosVisited[0].photo);};
     if (currentTitle >0 && currentTitle <= photosPlan.length) {
         $('#pictitlevis').text(photosVisited[currentTitle--].title);}
-    else {$('#pictitlevis').text(photosVisited[currentTitle].title);};
+    else {$('#pictitlevis').text(photosVisited[0].title);};
     if (currentDesc >0 && currentDesc <= photosPlan.length) {
         $('#descvis').text(photosVisited[currentDesc--].desc);}
-    else {$('#descvis').text(photosVisited[currentDesc].desc);};
+    else {$('#descvis').text(photosVisited[0].desc);};
     }
 );
 
@@ -67,13 +67,13 @@ $('#rightplan').click(()=> {
 
     if (currentPhoto >=0 && currentPhoto <10) {
         $('#photoplan').attr('src', photosPlan[currentPhoto++].photo);}
-    else {$('#photoplan').attr('src', photosPlan[currentPhoto].photo);};
+    else {$('#photoplan').attr('src', photosPlan[0].photo);};
     if (currentTitle >=0 && currentTitle <10) {
         $('#pictitleplan').text(photosPlan[currentTitle++].title);}
-    else {$('#pictitleplan').text(photosPlan[currentTitle].title);};
+    else {$('#pictitleplan').text(photosPlan[0].title);};
     if (currentDesc >=0 && currentDesc <10){
         $('#descplan').text(photosPlan[currentDesc++].desc);}
-    else {$('#descplan').text(photosPlan[currentDesc].desc);};
+    else {$('#descplan').text(photosPlan[0].desc);};
     }
 );
 
@@ -82,13 +82,13 @@ $('#leftplan').click(()=> {
 
     if (currentPhoto >0 && currentPhoto <= 10) {
         $('#photoplan').attr('src', photosPlan[currentPhoto--].photo);}
-    else {$('#photoplan').attr('src', photosPlan[currentPhoto].photo);};
+    else {$('#photoplan').attr('src', photosPlan[0].photo);};
     if (currentTitle >0 && currentTitle <= 10) {
         $('#pictitleplan').text(photosPlan[currentTitle--].title);}
-    else {$('#pictitleplan').text(photosPlan[currentTitle].title);};
+    else {$('#pictitleplan').text(photosPlan[0].title);};
     if (currentDesc >0 && currentDesc <= 10) {
         $('#descplan').text(photosPlan[currentDesc--].desc);}
-    else {$('#descplan').text(photosPlan[currentDesc].desc);};
+    else {$('#descplan').text(photosPlan[0].desc);};
     }
 );
     
