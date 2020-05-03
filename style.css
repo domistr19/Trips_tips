@@ -130,7 +130,7 @@ p{
     display: flex;
     flex-direction: column;
     width:70%;
-    margin:100px auto;
+    margin:100px auto 20px;
     justify-content:space-evenly;
 
 }
@@ -203,3 +203,24 @@ p{
         font-size: 50px bold;
  }
 
+ .thumbcontainer1, .thumbcontainer2{
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        margin:10px auto;
+        border: solid 2px #696969;
+        background-color: whitesmoke;
+        opacity: 0.5;
+        box-sizing: border-box;
+         }
+
+.thumbnails img{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 70px ;
+        max-height: 55px;
+        margin: 5px;
+        background:grey;}

@@ -23,6 +23,8 @@ photosPlan.push(buchlov,kost,loket,rabi,svihov,vranov);
 let currentPhoto = 0;
 let currentTitle = 0;
 let currentDesc = 0;
+let maxphotoVisited = photosVisited.length;
+let maxphotoPlan = photosPlan.length;
 
 $('#photovis').attr('src', photosVisited[currentPhoto].photo);
 $('#pictitlevis').text(photosVisited[currentPhoto].title);
@@ -50,28 +52,28 @@ $('#rightvis').click(()=> {
 
 $('#leftvis').click(()=> {
 
-    if (currentPhoto >0 && currentPhoto <= photosPlan.length) {
+    if (currentPhoto >0 && currentPhoto <= photosVisited.length) {
         $('#photovis').attr('src', photosVisited[currentPhoto--].photo);}
-    else {$('#photovis').attr('src', photosVisited[0].photo);};
-    if (currentTitle >0 && currentTitle <= photosPlan.length) {
+    else {$('#photovis').attr('src', photosVisited[4].photo);};
+    if (currentTitle >0 && currentTitle <= photosVisited.length) {
         $('#pictitlevis').text(photosVisited[currentTitle--].title);}
-    else {$('#pictitlevis').text(photosVisited[0].title);};
-    if (currentDesc >0 && currentDesc <= photosPlan.length) {
+    else {$('#pictitlevis').text(photosVisited[4].title);};
+    if (currentDesc >0 && currentDesc <= photosVisited.length) {
         $('#descvis').text(photosVisited[currentDesc--].desc);}
-    else {$('#descvis').text(photosVisited[0].desc);};
+    else {$('#descvis').text(photosVisited[4].desc);};
     }
 );
 
 
 $('#rightplan').click(()=> {
 
-    if (currentPhoto >=0 && currentPhoto <10) {
+    if (currentPhoto >=0 && currentPhoto <photosPlan.length) {
         $('#photoplan').attr('src', photosPlan[currentPhoto++].photo);}
     else {$('#photoplan').attr('src', photosPlan[0].photo);};
-    if (currentTitle >=0 && currentTitle <10) {
+    if (currentTitle >=0 && currentTitle <photosPlan.length) {
         $('#pictitleplan').text(photosPlan[currentTitle++].title);}
     else {$('#pictitleplan').text(photosPlan[0].title);};
-    if (currentDesc >=0 && currentDesc <10){
+    if (currentDesc >=0 && currentDesc <photosPlan.length){
         $('#descplan').text(photosPlan[currentDesc++].desc);}
     else {$('#descplan').text(photosPlan[0].desc);};
     }
@@ -80,17 +82,23 @@ $('#rightplan').click(()=> {
 
 $('#leftplan').click(()=> {
 
-    if (currentPhoto >0 && currentPhoto <= 10) {
+    if (currentPhoto >0 && currentPhoto <= photosPlan.length) {
         $('#photoplan').attr('src', photosPlan[currentPhoto--].photo);}
-    else {$('#photoplan').attr('src', photosPlan[0].photo);};
-    if (currentTitle >0 && currentTitle <= 10) {
+    else {$('#photoplan').attr('src', photosPlan[maxphotoPlan].photo);};
+    if (currentTitle >0 && currentTitle <= photosPlan.length) {
         $('#pictitleplan').text(photosPlan[currentTitle--].title);}
-    else {$('#pictitleplan').text(photosPlan[0].title);};
-    if (currentDesc >0 && currentDesc <= 10) {
+    else {$('#pictitleplan').text(photosPlan[maxphotoPlan].title);};
+    if (currentDesc >0 && currentDesc <= photosPlan.length) {
         $('#descplan').text(photosPlan[currentDesc--].desc);}
-    else {$('#descplan').text(photosPlan[0].desc);};
+    else {$('#descplan').text(photosPlan[maxphotoPlan].desc);};
     }
 );
     
+photosVisited.forEach((photosVisited) => {
+    $('.thumbcontainer1').append (`<div class = thumbnails data-index=${index}><img src="${photosVisited.photo}"></div>`);
+    $('.thumbnails div').click(()=> {$('#photoplan').attr('src', photosVisited[index].photo); });
+});
 
-
+photosPlan.forEach((photosPlan) => {
+    $('.thumbcontainer2').append (`<div class = thumbnails><img src="${photosPlan.photo}"></div>`)    
+});
